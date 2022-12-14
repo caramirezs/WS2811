@@ -4,7 +4,7 @@ import board
 import neopixel
 import time 
 
-NUMBEROFLEDS = 500
+NUMBEROFLEDS = 250
 pixels = neopixel.NeoPixel(board.D18, NUMBEROFLEDS)
 
 for x in range(NUMBEROFLEDS):
