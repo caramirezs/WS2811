@@ -6,25 +6,31 @@ import time
 import sys
 import cv2
 
-NUMBEROFLEDS = 255
+NUMBEROFLEDS = 250
 pixels = neopixel.NeoPixel(board.D18, NUMBEROFLEDS,
 brightness=0.1) 
 ids =  sys.argv[1:]
-
 intervalo = range(int(ids[0]), int(ids[1]))
-
-cam = cv2.VideoCapture('http://192.168.1.136:4747/mjpegfeed')
-time.sleep(5)
-ret, image = cam.read()
-cv2.imshow('Imagetest',image)
-
+run = True      
 
 for id in intervalo:
     i = int(id)
-    pixels[i] = (255,255,255)
-    time.sleep(0.2)
-    cv2.imwrite(f'./img/test{i}.jpg', image)
-    time.sleep(0.5)
+    print(f'LED {i} de {NUMBEROFLEDS} -------')
+    pixels[i] = (255,255,255)   
+    print(f' >> LED:ON')
+    cam = cv2.VideoCapture('http://192.168.1.136:4747/mjpegfeed?640x480')
+    ret, image = cam.read() # Capture frame-by-frame 
+    cv2.imshow('Imagetest',image)
+    cv2.waitKey(500)
+    cv2.imwrite(f'./img/IMG{i:0>3}_y2.jpg', image)
+    print(' >> Imagen guardada')
     pixels[i] = (0, 0, 0)
+    print(f' >> LED:OFF\nFIN -------')    
+    cam.release()
+    cv2.destroyAllWindows()
+    time.sleep(2)
+    
 print("Done")
+
+
 
