@@ -15,7 +15,7 @@ run = True
 
 for id in intervalo:
     i = int(id)
-    print(f'LED {i} de {NUMBEROFLEDS} -------')
+    print(f'LED {i+1} de {NUMBEROFLEDS} -------')
     pixels[i] = (255,255,255)   
     print(f' >> LED:ON')
     cam = cv2.VideoCapture('http://192.168.1.136:4747/mjpegfeed?640x480')
