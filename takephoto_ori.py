@@ -8,6 +8,6 @@ while True:
 	k = cv2.waitKey(1)
 	if k != -1:
 		break
-cv2.imwrite(f'./img/IMG_ori_y1.jpg', image)
+cv2.imwrite(f'./img/IMG_ori_x2.jpg', image)
 cam.release()
 cv2.destroyAllWindows()

@@ -22,7 +22,7 @@ for id in intervalo:
     ret, image = cam.read() # Capture frame-by-frame 
     cv2.imshow('Imagetest',image)
     cv2.waitKey(500)
-    cv2.imwrite(f'./img/IMG{i:0>3}_y2.jpg', image)
+    cv2.imwrite(f'./img/IMG{i:0>3}_x2.jpg', image)
     print(' >> Imagen guardada')
     pixels[i] = (0, 0, 0)
     print(f' >> LED:OFF\nFIN -------')    
