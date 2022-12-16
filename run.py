@@ -60,7 +60,7 @@ print("Finished Parsing")
 while True:
     f = 0
     for frame in lightArray:
-        print("running frame " + str(f))
+        # print("running frame " + str(f))
         LED = 0
         while LED < NUMBEROFLEDS:
             pixels[LED] = frame[LED]
