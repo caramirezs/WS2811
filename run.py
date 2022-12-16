@@ -66,6 +66,6 @@ while True:
             pixels[LED] = frame[LED]
             LED += 1
         pixels.show()
-
         f += 1
+        print(f'Cilo terminado ({f})')
 #        time.sleep(sleep_time)
