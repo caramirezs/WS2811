@@ -57,8 +57,8 @@ with open(csvFile, 'r') as read_obj:
 print("Finished Parsing")
 
 # run the code on the tree
+ciclo=0
 while True:
-    ciclo=0
     f = 0
     for frame in lightArray:
         # print("running frame " + str(f))
