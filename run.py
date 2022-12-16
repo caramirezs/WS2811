@@ -58,6 +58,7 @@ print("Finished Parsing")
 
 # run the code on the tree
 while True:
+    ciclo=0
     f = 0
     for frame in lightArray:
         # print("running frame " + str(f))
@@ -67,5 +68,5 @@ while True:
             LED += 1
         pixels.show()
         f += 1
-        print(f'Cilo terminado ({f})')
+    print(f'Cilo terminado ({ciclo})')
 #        time.sleep(sleep_time)
