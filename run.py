@@ -68,5 +68,6 @@ while True:
             LED += 1
         pixels.show()
         f += 1
+    ciclo +=1
     print(f'Cilo terminado ({ciclo})')
 #        time.sleep(sleep_time)
