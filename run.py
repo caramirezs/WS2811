@@ -51,7 +51,6 @@ with open(csvFile, 'r') as read_obj:
             # append that line to lightArray
             lightArray.append(parsed_row)
         # time.sleep(0.03)
-
         lineNumber += 1
 
 print("Finished Parsing")
