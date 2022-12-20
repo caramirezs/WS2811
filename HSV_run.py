@@ -14,8 +14,8 @@ def chunks(lst, n):
         yield lst[i:i + n]
 
 
-sleep_time = 0.033 # approx 30fps
-#sleep_time = 0.017  # approx 60fps
+#sleep_time = 0.033 # approx 30fps
+sleep_time = 0.017  # approx 60fps
 
 NUMBEROFLEDS = 250
 pixels = neopixel.NeoPixel(board.D18, NUMBEROFLEDS, auto_write=False, pixel_order=neopixel.RGB)
