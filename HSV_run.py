@@ -18,7 +18,8 @@ def chunks(lst, n):
 sleep_time = 0.017  # approx 60fps
 
 NUMBEROFLEDS = 250
-pixels = neopixel.NeoPixel(board.D18, NUMBEROFLEDS, auto_write=False, pixel_order=neopixel.RGB)
+pixels = neopixel.NeoPixel(board.D18, NUMBEROFLEDS, auto_write=False,
+                           pixel_order=neopixel.RGB, brightness=0.6)
 
 csvFile = sys.argv[1]
 
