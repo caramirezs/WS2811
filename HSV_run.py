@@ -64,8 +64,7 @@ while True:
         # print("running frame " + str(f))
         LED = 0
         while LED < NUMBEROFLEDS:
-            print(frame[LED])
-            color = fancy.CHSV(frame[LED])
+            color = fancy.CHSV(frame[LED][0], frame[LED][1], frame[LED][2])
             pixels[LED] = color.pack()
             LED += 1
         pixels.show()
